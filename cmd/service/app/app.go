@@ -9,14 +9,17 @@ import (
 	"strconv"
 )
 
+const OK = 200
+
 type Server struct {
 	offersSvc *offers.Service
 	router    chi.Router
 }
-type Result struct{
-	Resulg string
+type Result struct {
+	Resulg  string
 	Comment string `json:"comment", omitempty`
 }
+
 func NewServer(offersSvc *offers.Service, router chi.Router) *Server {
 	return &Server{offersSvc: offersSvc, router: router}
 }
@@ -40,17 +43,10 @@ func (s *Server) handleGetOffers(writer http.ResponseWriter, request *http.Reque
 		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
-
-	data, err := json.Marshal(items)
+	err = makeResponse(items, OK, writer)
 	if err != nil {
-		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		log.Println(err)
 		return
-	}
-
-	writer.Header().Set("Content-Type", "application/json")
-	_, err = writer.Write(data)
-	if err != nil {
-		log.Print(err)
 	}
 }
 
@@ -63,22 +59,10 @@ func (s *Server) handleGetOfferByID(writer http.ResponseWriter, request *http.Re
 	}
 
 	item, err := s.offersSvc.ByID(request.Context(), id)
+	err = makeResponse(item, OK, writer)
 	if err != nil {
-		// TODO: handle not found
-		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		log.Println(err)
 		return
-	}
-
-	data, err := json.Marshal(item)
-	if err != nil {
-		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
-		return
-	}
-
-	writer.Header().Set("Content-Type", "application/json")
-	_, err = writer.Write(data)
-	if err != nil {
-		log.Print(err)
 	}
 }
 
@@ -95,17 +79,10 @@ func (s *Server) handleSaveOffer(writer http.ResponseWriter, request *http.Reque
 		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
-
-	data, err := json.Marshal(item)
+	err = makeResponse(item, OK, writer)
 	if err != nil {
-		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		log.Println(err)
 		return
-	}
-
-	writer.Header().Set("Content-Type", "application/json")
-	_, err = writer.Write(data)
-	if err != nil {
-		log.Print(err)
 	}
 }
 
@@ -118,33 +95,41 @@ func (s *Server) handleRemoveOfferByID(writer http.ResponseWriter, request *http
 		return
 	}
 	offer, err := s.offersSvc.Delete(request.Context(), id)
-	if offer.ID == 0 && offer.Percent == "" && offer.Company == "" && offer.Comment == ""{
+	if offer.ID == 0 && offer.Percent == "" && offer.Company == "" && offer.Comment == "" {
 		res := Result{Resulg: "Error", Comment: "No such offer"}
 		writer.Header().Set("Content-Type", "application/json")
-		data, err := json.Marshal(res)
+		err := makeResponse(res, OK, writer)
 		if err != nil {
 			log.Println(err)
-			http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			return
 		}
-		_, err = writer.Write(data)
-		return
 	}
-	if err != nil{
-		log.Println(err)
-		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
-		return
-	}
-	writer.Header().Set("Content-Type", "application/json")
-	data, err := json.Marshal(offer)
 	if err != nil {
 		log.Println(err)
 		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
-	_, err = writer.Write(data)
+	err = makeResponse(offer, OK, writer)
 	if err != nil {
-		log.Print(err)
+		log.Println(err)
+		return
 	}
 
+}
+func makeResponse(resp interface{}, status int, w http.ResponseWriter) error {
+	if resp != nil {
+		body, err := json.Marshal(resp)
+		if err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return err
+		}
+		w.Header().Add("Content-Type", "application/json")
+		_, err = w.Write(body)
+		if err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return err
+		}
+	}
+	w.WriteHeader(status)
+	return nil
 }
