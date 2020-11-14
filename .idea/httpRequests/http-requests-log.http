@@ -1,0 +1,390 @@
+DELETE http://localhost:9999/offers/15
+
+<> 2020-11-14T091223.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 15, "company": "Delivery Club", "percent": "40%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T091221.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T091218.200.json
+
+###
+
+DELETE http://localhost:9999/offers/14
+
+<> 2020-11-14T091210.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T091206.200.json
+
+###
+
+DELETE http://localhost:9999/offers/13
+
+<> 2020-11-14T091125.200.json
+
+###
+
+DELETE http://localhost:9999/offers/13
+
+<> 2020-11-14T090723.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T090718.200.json
+
+###
+
+DELETE http://localhost:9999/offers/13
+
+<> 2020-11-14T090657.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T090653.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T090650.200.json
+
+###
+
+DELETE http://localhost:9999/offers/6
+
+<> 2020-11-14T090156.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T090149.200.json
+
+###
+
+DELETE http://localhost:9999/offers/12
+
+<> 2020-11-14T090146.200.json
+
+###
+
+DELETE http://localhost:9999/offers/12
+
+<> 2020-11-14T090035.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T090031.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T090029.200.json
+
+###
+
+DELETE http://localhost:9999/offers/11
+
+<> 2020-11-14T085421.200.json
+
+###
+
+DELETE http://localhost:9999/offers/11
+
+<> 2020-11-14T084925.500.txt
+
+###
+
+DELETE http://localhost:9999/offers/11
+
+<> 2020-11-14T084815.500.txt
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T084812.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T084808.200.json
+
+###
+
+DELETE http://localhost:9999/offers/10
+
+<> 2020-11-14T084636.500.txt
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T084631.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T084629.200.json
+
+###
+
+DELETE http://localhost:9999/offers/10
+
+<> 2020-11-14T084624.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T084619.200.json
+
+###
+
+DELETE http://localhost:9999/offers/9
+
+<> 2020-11-14T084455.500.txt
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T084451.200.json
+
+###
+
+DELETE http://localhost:9999/offers/8
+
+<> 2020-11-14T084342.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T084339.200.json
+
+###
+
+DELETE http://localhost:9999/offers/7
+
+<> 2020-11-14T084312.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T084307.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T084028.200.json
+
+###
+
+DELETE http://localhost:9999/offers/5
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T083934.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T083929.200.json
+
+###
+
+DELETE http://localhost:9999/offers/4
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T083721.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T083718.200.json
+
+###
+
+DELETE http://localhost:9999/offers/3
+
+<> 2020-11-14T083456.200.json
+
+###
+
+DELETE http://localhost:9999/offers/3}
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 3, "company": "Delivery Club", "percent": "40%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T083445.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T083435.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T083433.200.json
+
+###
+
+DELETE http://localhost:9999/offers/2
+
+<> 2020-11-14T083356.200.json
+
+###
+
+DELETE http://localhost:9999/offers/2
+
+<> 2020-11-14T083350.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T083345.200.json
+
+###
+
+DELETE http://localhost:9999/offers/1
+
+<> 2020-11-14T083339.200.json
+
+###
+
+DELETE http://localhost:9999/offers/1
+
+<> 2020-11-14T083331.200.json
+
+###
+
