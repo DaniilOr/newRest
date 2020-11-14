@@ -13,10 +13,11 @@ type Server struct {
 	offersSvc *offers.Service
 	router    chi.Router
 }
-type Result struct{
-	Resulg string
+type Result struct {
+	Resulg  string
 	Comment string `json:"comment", omitempty`
 }
+
 func NewServer(offersSvc *offers.Service, router chi.Router) *Server {
 	return &Server{offersSvc: offersSvc, router: router}
 }
@@ -118,7 +119,7 @@ func (s *Server) handleRemoveOfferByID(writer http.ResponseWriter, request *http
 		return
 	}
 	offer, err := s.offersSvc.Delete(request.Context(), id)
-	if offer.ID == 0 && offer.Percent == "" && offer.Company == "" && offer.Comment == ""{
+	if offer.ID == 0 && offer.Percent == "" && offer.Company == "" && offer.Comment == "" {
 		res := Result{Resulg: "Error", Comment: "No such offer"}
 		writer.Header().Set("Content-Type", "application/json")
 		data, err := json.Marshal(res)
@@ -130,7 +131,7 @@ func (s *Server) handleRemoveOfferByID(writer http.ResponseWriter, request *http
 		_, err = writer.Write(data)
 		return
 	}
-	if err != nil{
+	if err != nil {
 		log.Println(err)
 		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
