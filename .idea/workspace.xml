@@ -47,21 +47,7 @@
       <list>
         <RestClientRequest>
           <option name="httpMethod" value="DELETE" />
-          <option name="urlBase" value="http://localhost:9999/offers/6" />
-          <option name="urlPath" value="" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:9999/offers" />
-          <option name="urlPath" value="" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="DELETE" />
-          <option name="urlBase" value="http://localhost:9999/offers/12" />
+          <option name="urlBase" value="http://localhost:9999/offers/15" />
           <option name="urlPath" value="" />
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
@@ -79,7 +65,58 @@
             </list>
           </option>
           <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;    &quot;id&quot;: 15, &quot;company&quot;: &quot;Delivery Club&quot;, &quot;percent&quot;: &quot;40%&quot;, &quot;comment&quot;: &quot;на первую покупку&quot;&#10;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:9999/offers" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{&#10;    &quot;id&quot;: 0, &quot;company&quot;: &quot;Delivery Club&quot;, &quot;percent&quot;: &quot;35%&quot;, &quot;comment&quot;: &quot;на первую покупку&quot;&#10;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:9999/offers/14" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:9999/offers/13" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:9999/offers" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:9999/offers/6" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:9999/offers/12" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -234,10 +271,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.offers#5" />
-        <item itemvalue="HTTP Request.offers#1" />
+        <item itemvalue="HTTP Request.offers#4" />
         <item itemvalue="HTTP Request.offers#2" />
         <item itemvalue="Go Build.go build github.com/DaniilOr/newRest/cmd/service" />
-        <item itemvalue="HTTP Request.offers#4" />
+        <item itemvalue="HTTP Request.offers#1" />
       </list>
     </recent_temporary>
   </component>
@@ -253,22 +290,22 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="612" y="391" width="800" height="578" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605364135124" />
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1605366122027">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1605366755077">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1605366122027" />
-    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1605366122026">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1605366755077" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1605366755076">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1605366122026" />
-    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1605366122025">
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1605366755076" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1605366755076">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1605366122025" />
-    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1605366122026">
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1605366755076" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1605366755077">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1605366122026" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1605366755077" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1605363067220">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
