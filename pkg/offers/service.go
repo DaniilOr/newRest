@@ -76,7 +76,7 @@ func (s *Service) Save(ctx context.Context, itemToSave *Offer) (*Offer, error) {
 			ctx,
 			`INSERT INTO offers (company, percent, comment) VALUES($1, $2, $3) RETURNING id`,
 			itemToSave.Company, itemToSave.Percent, itemToSave.Comment,
-		).Scan(&itemToSave.ID);
+		).Scan(&itemToSave.ID)
 		if err != nil {
 			return nil, err
 		}
@@ -97,26 +97,26 @@ func (s *Service) Save(ctx context.Context, itemToSave *Offer) (*Offer, error) {
 	return itemToSave, nil
 }
 
-func (s*Service) Delete(ctx context.Context, id int64) (Offer, error){
+func (s *Service) Delete(ctx context.Context, id int64) (Offer, error) {
 	var offer Offer
 	tag, err := s.pool.Query(ctx,
 		`DELETE FROM offers WHERE id = $1 RETURNING id, comment, company, percent`,
 		id)
-	if err != nil{
+	if err != nil {
 		return Offer{}, err
 	}
 	defer tag.Close()
-	for tag.Next(){
+	for tag.Next() {
 		err = tag.Scan(
 			&offer.ID,
 			&offer.Comment,
 			&offer.Company,
 			&offer.Percent,
 		)
-		if err != nil{
+		if err != nil {
 			return Offer{}, nil
 		}
 	}
 
-	return  offer, nil
+	return offer, nil
 }

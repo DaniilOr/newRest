@@ -1,3 +1,27 @@
+DELETE http://localhost:9999/offers/16
+
+<> 2020-11-14T093041.200.json
+
+###
+
+GET http://localhost:9999/offers
+
+<> 2020-11-14T093037.200.json
+
+###
+
+POST http://localhost:9999/offers
+Content-Type: application/json
+
+{
+    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
+
+}
+
+<> 2020-11-14T093034.200.json
+
+###
+
 DELETE http://localhost:9999/offers/15
 
 <> 2020-11-14T091223.200.json
@@ -361,30 +385,6 @@ DELETE http://localhost:9999/offers/2
 DELETE http://localhost:9999/offers/2
 
 <> 2020-11-14T083350.200.json
-
-###
-
-POST http://localhost:9999/offers
-Content-Type: application/json
-
-{
-    "id": 0, "company": "Delivery Club", "percent": "35%", "comment": "на первую покупку"
-
-}
-
-<> 2020-11-14T083345.200.json
-
-###
-
-DELETE http://localhost:9999/offers/1
-
-<> 2020-11-14T083339.200.json
-
-###
-
-DELETE http://localhost:9999/offers/1
-
-<> 2020-11-14T083331.200.json
 
 ###
 
